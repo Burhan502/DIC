@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery of Daressalaam Islamic Club - beach, facilities, and events.">
+    <title>Gallery - Daressalaam Islamic Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Daressalaam Islamic Club</div>
+        <nav class="nav-links">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" title="About us">About</a>
+            <a href="activities.html" title="Our activities">Activities</a>
+            <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="contact.html" title="Contact us">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>Photo Gallery</h1>
+            <p>See the beauty of Daressalaam Islamic Club</p>
+        </section>
+
+        <!-- GALLERY GRID -->
+        <section class="gallery fade-in">
+            <h2>Our Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Beautiful private beach at sunset">
+                    <p>Private Beach - Sunset View</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Family activities on the beach">
+                    <p>Family Recreation Area</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Dining facility with ocean view">
+                    <p>Halal Restaurant</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Islamic event celebration">
+                    <p>Community Events</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Sports facilities">
+                    <p>Sports & Recreation</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach.jpg" alt="Wellness and fitness area">
+                    <p>Wellness Area</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta fade-in">
+            <h2>Ready to Experience the Magic?</h2>
+            <a href="contact.html" class="btn">Get In Touch</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>

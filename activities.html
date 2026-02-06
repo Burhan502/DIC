@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore activities and experiences at Daressalaam Islamic Club.">
+    <title>Activities - Daressalaam Islamic Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Daressalaam Islamic Club</div>
+        <nav class="nav-links">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" title="About us">About</a>
+            <a href="activities.html" title="Our activities">Activities</a>
+            <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="contact.html" title="Contact us">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>Our Activities</h1>
+            <p>Explore the experiences we offer</p>
+        </section>
+
+        <!-- ACTIVITIES LIST -->
+        <section class="activities fade-in">
+            <h2>Year-Round Experiences</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🏖️ Private Beach Access</h3>
+                    <p>Enjoy a clean, peaceful, and modest beach environment exclusively for our members. 
+                    Perfect for swimming, relaxation, and water activities.</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍👩‍👧‍👦 Family Recreation</h3>
+                    <p>Dedicated picnic zones, children's play areas, and family gathering spaces with BBQ facilities 
+                    and comfortable seating areas.</p>
+                </div>
+                <div class="card">
+                    <h3>🕌 Islamic Events</h3>
+                    <p>Host Nikkah ceremonies, Islamic lectures, Quran recitation circles, and community programs 
+                    throughout the year.</p>
+                </div>
+                <div class="card">
+                    <h3>🍽️ Halal Dining</h3>
+                    <p>Premium halal restaurant and café offering traditional and modern cuisine with stunning ocean views.</p>
+                </div>
+                <div class="card">
+                    <h3>⚽ Sports & Recreation</h3>
+                    <p>Volleyball, football, badminton courts and fitness facilities for active members.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Educational Workshops</h3>
+                    <p>Regular workshops on Islamic topics, health, wellness, and personal development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEMBERSHIP BENEFITS -->
+        <section class="membership fade-in">
+            <h2>Membership Benefits</h2>
+            <div class="benefit-list">
+                <div class="benefit">✓ Unlimited beach access</div>
+                <div class="benefit">✓ Priority booking for events</div>
+                <div class="benefit">✓ Discounts on dining and services</div>
+                <div class="benefit">✓ Exclusive member events</div>
+                <div class="benefit">✓ Family guest privileges</div>
+                <div class="benefit">✓ Seasonal special promotions</div>
+            </div>
+            <a href="contact.html" class="btn">Join Us Today</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>

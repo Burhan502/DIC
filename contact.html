@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Daressalaam Islamic Club - Get in touch with us for memberships and inquiries.">
+    <title>Contact - Daressalaam Islamic Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Daressalaam Islamic Club</div>
+        <nav class="nav-links">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" title="About us">About</a>
+            <a href="activities.html" title="Our activities">Activities</a>
+            <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="contact.html" title="Contact us">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section fade-in">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-container">
+                <!-- CONTACT INFO -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <h4>📍 Location</h4>
+                        <p>Dar es Salaam, Tanzania</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p><a href="tel:+255XXXXXXXXX">+255 XXX XXX XXX</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>✉️ Email</h4>
+                        <p><a href="mailto:info@daressalaamislamicclub.com">info@daressalaamislamicclub.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>🕐 Business Hours</h4>
+                        <p>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday - Sunday: 8:00 AM - 8:00 PM
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta fade-in">
+            <h2>Ready to Join Our Community?</h2>
+            <a href="activities.html" class="btn">Explore Membership</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>

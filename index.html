@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daressalaam Islamic Club - Premium halal beach and leisure club built on Islamic values. Family-friendly environment with beach, dining, and events.">
+    <title>Daressalaam Islamic Club - Premium Halal Beach</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Daressalaam Islamic Club</div>
+        <nav class="nav-links">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" title="About us">About</a>
+            <a href="activities.html" title="Our activities">Activities</a>
+            <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="contact.html" title="Contact us">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+        <div class="overlay">
+            <h1>Daressalaam Islamic Club</h1>
+            <p>Luxury Halal Beach • Peace • Family • Nature</p>
+            <a href="about.html" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about fade-in">
+        <h2>Who We Are</h2>
+        <p>
+            A premium halal beach and leisure club built on Islamic values,
+            offering tranquility, family recreation, and natural beauty
+            along the shores of Dar es Salaam.
+        </p>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="activities fade-in">
+        <h2>Our Experiences</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Private Beach</h3>
+                <p>Clean, peaceful, and modest beach environment.</p>
+            </div>
+
+            <div class="card">
+                <h3>Family Recreation</h3>
+                <p>Picnic zones, children areas, and family gatherings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Islamic Events</h3>
+                <p>Nikkah ceremonies, lectures, and community programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta fade-in">
+        <h2>Experience Halal Luxury by the Ocean</h2>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>
+
+    <!-- OPTIONAL: Animation Script -->
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>

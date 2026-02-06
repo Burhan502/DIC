@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Daressalaam Islamic Club - A premium halal beach and leisure club built on Islamic values.">
+    <title>About - Daressalaam Islamic Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Daressalaam Islamic Club</div>
+        <nav class="nav-links">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" title="About us">About</a>
+            <a href="activities.html" title="Our activities">Activities</a>
+            <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="contact.html" title="Contact us">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>About Us</h1>
+            <p>Discover our mission and values</p>
+        </section>
+
+        <!-- MISSION -->
+        <section class="about-content fade-in">
+            <h2>Our Mission</h2>
+            <p>
+                Daressalaam Islamic Club is a premium halal beach and leisure destination built on solid Islamic principles. 
+                We provide a serene, family-friendly environment where Muslims can enjoy the natural beauty of the ocean while 
+                maintaining modesty, dignity, and peace.
+            </p>
+        </section>
+
+        <!-- VALUES -->
+        <section class="values fade-in">
+            <h2>Our Core Values</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🕌 Islamic Principles</h3>
+                    <p>Everything we do is guided by Islamic teachings and values.</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍👩‍👧‍👦 Family First</h3>
+                    <p>We create safe, welcoming spaces for families to bond and celebrate together.</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Environmental Care</h3>
+                    <p>We respect and protect the natural beauty of our coastal environment.</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Community</h3>
+                    <p>Building strong connections and fostering unity among our members.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORY -->
+        <section class="history fade-in">
+            <h2>Our Story</h2>
+            <p>
+                Founded in 2025, Daressalaam Islamic Club emerged from a vision to create a unique space where the Muslim 
+                community of Dar es Salaam could gather, celebrate, and find peace. Located along the beautiful shores of 
+                the Indian Ocean, our club offers the perfect blend of luxury, tranquility, and Islamic values. What started 
+                as a dream has grown into a thriving community hub.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>
