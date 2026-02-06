@@ -9,6 +9,20 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --accent: #C9A44C; /* primary gold */
+    --accent-dark: #A67C35; /* darker gold for hover */
+    --bg-dark: #0F0F0F; /* header/footer */
+    --cream: #F5F2EA; /* main backgrounds */
+    --text-dark: #0F0F0F;
+    --muted: #555555;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
 /* ===================== NAVBAR ===================== */
 .navbar {
     position: fixed;
@@ -19,16 +33,60 @@ html {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(139, 111, 78, 0.25);
+    background: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(12px);
     transition: all 0.4s ease;
 }
 
 .logo {
-    color: #c9a24d;
-    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent);
+    font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+}
+
+.site-logo {
+    height: 42px;
+    width: auto;
+    display: inline-block;
+}
+
+.logo-text {
+    display: none;
+}
+
+/* ===================== HAMBURGER MENU ===================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .nav-links {
@@ -37,7 +95,7 @@ html {
 }
 
 .nav-links a {
-    color: #f5efe6;
+    color: var(--cream);
     margin-left: 28px;
     text-decoration: none;
     font-size: 0.95rem;
@@ -53,7 +111,7 @@ html {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background: #c9a24d;
+    background: var(--accent);
     transition: width 0.3s ease;
 }
 
@@ -71,8 +129,8 @@ html {
     align-items: center;
     overflow: hidden;
     background: linear-gradient(
-        rgba(139,111,78,0.55),
-        rgba(90,70,50,0.55)
+        rgba(15,15,15,0.6),
+        rgba(15,15,15,0.4)
     ), url('../images/beach.jpg') center/cover no-repeat;
     background-attachment: fixed;
 }
@@ -100,7 +158,7 @@ html {
 .overlay {
     position: relative;
     text-align: center;
-    color: #f5efe6;
+    color: var(--cream);
     padding: 20px;
     opacity: 0;
     transform: translateY(20px);
@@ -118,15 +176,15 @@ html {
 .overlay p {
     font-size: 1.3rem;
     margin: 20px 0;
-    color: #e8dcc8;
+    color: var(--cream);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* ===================== BUTTONS ===================== */
 .btn {
     display: inline-block;
-    background: #c9a24d;
-    color: #3a2e22;
+    background: var(--accent);
+    color: var(--text-dark);
     padding: 15px 35px;
     text-decoration: none;
     font-weight: bold;
@@ -138,8 +196,8 @@ html {
 }
 
 .btn:hover {
-    background: #f5efe6;
-    color: #8b6f4e;
+    background: var(--cream);
+    color: var(--accent-dark);
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(201, 162, 77, 0.3);
 }
@@ -187,7 +245,7 @@ section.fade-in.appear {
 
 /* ===================== ABOUT SECTION ===================== */
 .about {
-    background: #f3ece0;
+    background: var(--cream);
     color: #3a2e22;
 }
 
@@ -203,14 +261,14 @@ section.fade-in.appear {
 
 /* ===================== ACTIVITIES SECTION ===================== */
 .activities {
-    background: #f6f1e6;
+    background: var(--cream);
     color: #3a2e22;
 }
 
 /* ===================== PAGE HEADER ===================== */
 .page-header {
-    background: linear-gradient(135deg, #8b6f4e 0%, #5a4632 100%);
-    color: #f5efe6;
+    background: var(--bg-dark);
+    color: var(--cream);
     padding: 150px 10% 80px;
     text-align: center;
 }
@@ -227,12 +285,12 @@ section.fade-in.appear {
 
 /* ===================== VALUES SECTION ===================== */
 .values {
-    background: #f3ece0;
+    background: var(--cream);
 }
 
 /* ===================== HISTORY SECTION ===================== */
 .history {
-    background: #f6f1e6;
+    background: var(--cream);
 }
 
 .history p {
@@ -251,7 +309,7 @@ section.fade-in.appear {
 }
 
 .card {
-    background: #e9e0d4;
+    background: #fff;
     padding: 35px;
     width: 280px;
     border-radius: 22px;
@@ -279,7 +337,7 @@ section.fade-in.appear {
 
 /* ===================== MEMBERSHIP BENEFITS ===================== */
 .membership {
-    background: #f6f1e6;
+    background: var(--cream);
 }
 
 .benefit-list {
@@ -368,7 +426,7 @@ section.fade-in.appear {
 }
 
 .info-item h4 {
-    color: #8b6f4e;
+    color: var(--accent-dark);
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
@@ -379,13 +437,13 @@ section.fade-in.appear {
 }
 
 .info-item a {
-    color: #c9a24d;
+    color: var(--accent);
     text-decoration: none;
     transition: 0.3s;
 }
 
 .info-item a:hover {
-    color: #8b6f4e;
+    color: var(--accent-dark);
     text-decoration: underline;
 }
 
@@ -424,14 +482,14 @@ section.fade-in.appear {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #c9a24d;
-    box-shadow: 0 0 5px rgba(201, 162, 77, 0.3);
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(166, 124, 53, 0.25);
 }
 
 /* ===================== CTA SECTION ===================== */
 .cta {
-    background: linear-gradient(to right, #8b6f4e, #5a4632);
-    color: #f5efe6;
+    background: linear-gradient(to right, var(--bg-dark), var(--accent-dark));
+    color: var(--cream);
     padding: 80px 10%;
 }
 
@@ -440,17 +498,407 @@ section.fade-in.appear {
     margin-bottom: 30px;
 }
 
-/* ===================== FOOTER ===================== */
-footer {
-    background: #3a2e22;
-    color: #e8dcc8;
+/* ===================== TESTIMONIALS ===================== */
+.testimonials {
+    background: var(--cream);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial {
+    background: white;
     padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(90, 70, 50, 0.1);
+    border-left: 5px solid var(--accent);
+}
+
+.testimony {
+    color: #555;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.author {
+    color: var(--accent-dark);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ===================== EVENTS ===================== */
+.events {
+    background: var(--cream);
+}
+
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(90, 70, 50, 0.1);
+    border-top: 4px solid var(--accent);
+    text-align: left;
+}
+
+.event-card h4 {
+    color: #3a2e22;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.event-card p {
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.event-card p strong {
+    color: #8b6f4e;
+}
+
+/* ===================== NEWSLETTER ===================== */
+.newsletter {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--bg-dark) 100%);
+    color: var(--cream);
+    padding: 80px 10%;
+}
+
+.newsletter h2 {
+    color: var(--cream);
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    color: rgba(245,242,234,0.9);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #3a2e22;
+}
+
+.newsletter-form input::placeholder {
+    color: #999;
+}
+
+/* ===================== MEMBER LOGIN ===================== */
+.member-login {
+    background: var(--accent) !important;
+    color: var(--text-dark) !important;
+    padding: 8px 15px !important;
+    border-radius: 6px !important;
+    margin-left: 15px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.member-login:hover {
+    background: var(--cream) !important;
+    color: var(--accent-dark) !important;
+    transform: scale(1.05) !important;
+}
+
+/* ===================== PRICING ===================== */
+.pricing {
+    background: #f6f1e6;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(90, 70, 50, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(90, 70, 50, 0.25);
+}
+
+.pricing-card.featured {
+    border: 3px solid var(--accent);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--text-dark);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.pricing-card h3 {
+    color: #3a2e22;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+}
+
+.price-features {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+    color: #555;
+}
+
+.price-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+}
+
+.price-features li:last-child {
+    border-bottom: none;
+}
+
+/* ===================== COMPARISON TABLE ===================== */
+.comparison {
+    background: #f3ece0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 10px 25px rgba(90, 70, 50, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table thead {
+    background: var(--accent-dark);
+    color: var(--cream);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e9e0d4;
+}
+
+.comparison-table th {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.comparison-table tr:hover {
+    background: #f9f5f0;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===================== WHY CHOOSE ===================== */
+.why-choose {
+    background: #f6f1e6;
+}
+
+/* ===================== FAQ ===================== */
+.faq-section {
+    background: #f6f1e6;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-group {
+    margin-bottom: 50px;
+}
+
+.faq-group h2 {
+    color: #3a2e22;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(90, 70, 50, 0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: #f9f5f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 1.05rem;
+    color: #3a2e22;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f0e8dc;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.faq-answer {
+    padding: 25px 20px;
+    color: #555;
+    line-height: 1.8;
+    border-top: 1px solid #e9e0d4;
+}
+
+.faq-answer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== ENHANCED FOOTER ===================== */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-section h5 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: var(--bg-dark);
+    color: var(--cream);
+    padding: 50px 10%;
     text-align: center;
     font-size: 0.95rem;
 }
 
 footer p {
-    color: #e8dcc8;
+    color: var(--cream);
 }
 
 /* ===================== ANIMATIONS ===================== */
@@ -468,20 +916,50 @@ footer p {
 /* ===================== RESPONSIVE DESIGN ===================== */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 15px 5%;
-        gap: 15px;
+        gap: 0;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(15, 15, 15, 0.98);
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        overflow-y: auto;
     }
 
     .nav-links a {
         margin-left: 0;
-        font-size: 0.85rem;
+        padding: 15px 20px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid rgba(201, 164, 76, 0.2);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a:hover {
+        background: rgba(201, 164, 76, 0.1);
     }
 
     .logo {
@@ -541,6 +1019,57 @@ footer p {
     .benefit-list {
         grid-template-columns: 1fr;
     }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-list {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        min-width: 100%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-section a {
+        display: block;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -590,5 +1119,27 @@ footer p {
 
     .page-header p {
         font-size: 0.95rem;
+    }
+
+    .faq-group h2 {
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+
+    .faq-question {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .faq-answer {
+        padding: 15px;
+    }
+
+    .pricing-card {
+        padding: 25px 15px;
+    }
+
+    .price {
+        font-size: 2rem;
     }
 }

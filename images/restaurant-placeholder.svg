@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f3ece0"/>
+  <!-- Building -->
+  <rect x="50" y="100" width="300" height="150" fill="#8b6f4e"/>
+  <!-- Roof -->
+  <polygon points="50,100 200,30 350,100" fill="#c9a24d"/>
+  <!-- Door -->
+  <rect x="175" y="180" width="50" height="70" fill="#3a2e22"/>
+  <!-- Windows -->
+  <rect x="80" y="130" width="40" height="40" fill="#e8dcc8"/>
+  <rect x="160" y="130" width="40" height="40" fill="#e8dcc8"/>
+  <rect x="280" y="130" width="40" height="40" fill="#e8dcc8"/>
+  <!-- Ocean view -->
+  <rect y="0" width="400" height="100" fill="#87CEEB"/>
+  <!-- Text -->
+  <text x="200" y="280" font-size="24" font-weight="bold" text-anchor="middle" fill="#3a2e22" font-family="Arial">🍽️ Halal Restaurant</text>
+</svg>

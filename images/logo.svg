@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1">
+      <stop offset="0" stop-color="#DDB85A"/>
+      <stop offset="1" stop-color="#C9A44C"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <circle cx="60" cy="60" r="48" fill="url(#lg)"/>
+    <text x="60" y="78" font-size="56" font-weight="700" text-anchor="middle" fill="#0F0F0F" font-family="Helvetica, Arial">D</text>
+  </g>
+  <g>
+    <!-- Use cream for main name so it is visible on dark header -->
+    <text x="140" y="55" font-size="28" font-weight="700" fill="#F5F2EA" font-family="Segoe UI, Tahoma, Arial">Daressalaam</text>
+    <!-- Use white for subtitle for contrast -->
+    <text x="140" y="88" font-size="18" fill="#FFFFFF" font-family="Segoe UI, Tahoma, Arial">Islamic Club</text>
+  </g>
+</svg>

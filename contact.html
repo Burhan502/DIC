@@ -6,18 +6,45 @@
     <meta name="description" content="Contact Daressalaam Islamic Club - Get in touch with us for memberships and inquiries.">
     <title>Contact - Daressalaam Islamic Club</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Daressalaam Islamic Club",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+255-XXX-XXXX",
+        "contactType": "Customer Service",
+        "areaServed": "TZ"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dar es Salaam",
+        "addressCountry": "TZ"
+      }
+    }
+    </script>
 </head>
 <body>
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo">Daressalaam Islamic Club</div>
-        <nav class="nav-links">
+        <div class="logo"><img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo"></div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html" title="Home">Home</a>
             <a href="about.html" title="About us">About</a>
             <a href="activities.html" title="Our activities">Activities</a>
+            <a href="membership.html" title="Membership plans">Membership</a>
             <a href="gallery.html" title="Photo gallery">Gallery</a>
+            <a href="faq.html" title="FAQ">FAQ</a>
             <a href="contact.html" title="Contact us">Contact</a>
+            <a href="#" title="Member login" class="member-login">👤 Login</a>
         </nav>
     </header>
 
@@ -64,30 +91,30 @@
                 <!-- CONTACT FORM -->
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/f/xyzabc123" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required aria-label="Full name">
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required aria-label="Email address">
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" aria-label="Phone number">
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required aria-label="Subject">
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required aria-label="Message"></textarea>
                         </div>
 
                         <button type="submit" class="btn">Send Message</button>
@@ -105,7 +132,36 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+255XXXXXXXXX">📞 +255 XXX XXX XXX</a></li>
+                    <li><a href="mailto:info@daressalaamislamicclub.com">📧 info@daressalaamislamicclub.com</a></li>
+                    <li><a href="https://wa.me/255XXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+                    <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
+                </div>
+            </div>
+        </div>
+        <hr style="opacity: 0.3; margin: 20px 0;">
+        <p>&copy; 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
     </footer>
 
     <script>
@@ -127,6 +183,25 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
     </script>
 
 </body>
