@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Daressalaam Islamic Club - Get in touch with us for memberships and inquiries.">
     <title>Contact - Daressalaam Islamic Club</title>
+    <link rel="canonical" href="https://daressalaamislamicclub.com/contact.html">
+    <meta property="og:title" content="Contact - Daressalaam Islamic Club">
+    <meta property="og:description" content="Get in touch with Daressalaam Islamic Club for memberships, events, and inquiries.">
+    <meta property="og:url" content="https://daressalaamislamicclub.com/contact.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
@@ -28,6 +32,8 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="logo"><img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo"></div>
@@ -39,16 +45,18 @@
         <nav class="nav-links" id="nav-links">
             <a href="index.html" title="Home">Home</a>
             <a href="about.html" title="About us">About</a>
+            <a href="services.html" title="Our services">Services</a>
             <a href="activities.html" title="Our activities">Activities</a>
             <a href="membership.html" title="Membership plans">Membership</a>
+            <a href="board-members.html" title="Board members">Board</a>
             <a href="gallery.html" title="Photo gallery">Gallery</a>
             <a href="faq.html" title="FAQ">FAQ</a>
-            <a href="contact.html" title="Contact us">Contact</a>
+            <a href="contact.html" title="Contact us" aria-current="page">Contact</a>
             <a href="#" title="Member login" class="member-login">👤 Login</a>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- PAGE HEADER -->
         <section class="page-header">
             <h1>Contact Us</h1>
@@ -66,17 +74,17 @@
                     
                     <div class="info-item">
                         <h4>📍 Location</h4>
-                        <p>Dar es Salaam, Tanzania</p>
+                        <p>P.O. Box 2590, Dar es Salaam, Tanzania</p>
                     </div>
 
                     <div class="info-item">
                         <h4>📞 Phone</h4>
-                        <p><a href="tel:+255XXXXXXXXX">+255 XXX XXX XXX</a></p>
+                        <p><a href="tel:+255767432432">+255 767 432 432</a></p>
                     </div>
 
                     <div class="info-item">
                         <h4>✉️ Email</h4>
-                        <p><a href="mailto:info@daressalaamislamicclub.com">info@daressalaamislamicclub.com</a></p>
+                        <p><a href="mailto:dic@islamiclub.org">dic@islamiclub.org</a></p>
                     </div>
 
                     <div class="info-item">
@@ -91,7 +99,7 @@
                 <!-- CONTACT FORM -->
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form action="https://formspree.io/f/xyzabc123" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/xyzabc123" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required aria-label="Full name">
@@ -117,8 +125,12 @@
                             <textarea id="message" name="message" rows="5" required aria-label="Message"></textarea>
                         </div>
 
+                        <input type="text" name="website" id="contact-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+                    <div id="contact-success" role="status" class="muted" hidden>Message sent — we will contact you soon.</div>
+                    <div id="contact-error" role="alert" class="muted" hidden>Sending failed. Please try again later.</div>
                 </div>
             </div>
         </section>
@@ -145,9 +157,9 @@
             <div class="footer-section">
                 <h5>Contact</h5>
                 <ul>
-                    <li><a href="tel:+255XXXXXXXXX">📞 +255 XXX XXX XXX</a></li>
-                    <li><a href="mailto:info@daressalaamislamicclub.com">📧 info@daressalaamislamicclub.com</a></li>
-                    <li><a href="https://wa.me/255XXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+                    <li><a href="tel:+255767432432">📞 +255 767 432 432</a></li>
+                    <li><a href="mailto:dic@islamiclub.org">📧 dic@islamiclub.org</a></li>
+                    <li><a href="https://wa.me/255767432432" target="_blank" rel="noopener">💬 WhatsApp</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -160,8 +172,8 @@
                 </div>
             </div>
         </div>
-        <hr style="opacity: 0.3; margin: 20px 0;">
-        <p>&copy; 2026 Daressalaam Islamic Club | Halal • Peace • Nature</p>
+        <hr class="hr-faint">
+        <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
     <script>
@@ -200,6 +212,36 @@
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                 });
+            });
+        }
+
+        // Contact form AJAX with honeypot
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            const successEl = document.getElementById('contact-success');
+            const errorEl = document.getElementById('contact-error');
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (successEl) successEl.hidden = true;
+                if (errorEl) errorEl.hidden = true;
+                const honeypot = document.getElementById('contact-website');
+                if (honeypot && honeypot.value) return; // likely bot
+                const formData = new FormData(contactForm);
+                try {
+                    const res = await fetch(contactForm.action, {
+                        method: contactForm.method || 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (res.ok) {
+                        if (successEl) successEl.hidden = false;
+                        contactForm.reset();
+                    } else {
+                        if (errorEl) errorEl.hidden = false;
+                    }
+                } catch (err) {
+                    if (errorEl) errorEl.hidden = false;
+                }
             });
         }
     </script>

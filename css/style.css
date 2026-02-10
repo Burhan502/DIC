@@ -10,16 +10,16 @@ html {
 }
 
 :root {
-    --accent: #C9A44C; /* primary gold */
-    --accent-dark: #A67C35; /* darker gold for hover */
-    --bg-dark: #0F0F0F; /* header/footer */
-    --cream: #F5F2EA; /* main backgrounds */
-    --text-dark: #0F0F0F;
-    --muted: #555555;
+    --accent: #1E6FFF; /* primary blue */
+    --accent-dark: #1558D6; /* darker blue for hover */
+    --bg-dark: #0F0F0F; /* header/footer (black) */
+    --bg: #FFFFFF; /* main backgrounds (white) */
+    --text-dark: #0F0F0F; /* primary text (black) */
+    --muted: #666666; /* muted/secondary text */
 }
 
 body {
-    background: var(--cream);
+    background: var(--bg);
     color: var(--text-dark);
 }
 
@@ -72,7 +72,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--cream);
+    background: var(--bg);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -95,7 +95,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--cream);
+    color: var(--bg);
     margin-left: 28px;
     text-decoration: none;
     font-size: 0.95rem;
@@ -158,7 +158,7 @@ body {
 .overlay {
     position: relative;
     text-align: center;
-    color: var(--cream);
+    color: var(--bg);
     padding: 20px;
     opacity: 0;
     transform: translateY(20px);
@@ -176,7 +176,7 @@ body {
 .overlay p {
     font-size: 1.3rem;
     margin: 20px 0;
-    color: var(--cream);
+    color: var(--bg);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -184,7 +184,7 @@ body {
 .btn {
     display: inline-block;
     background: var(--accent);
-    color: var(--text-dark);
+    color: #ffffff;
     padding: 15px 35px;
     text-decoration: none;
     font-weight: bold;
@@ -196,10 +196,10 @@ body {
 }
 
 .btn:hover {
-    background: var(--cream);
+    background: var(--bg);
     color: var(--accent-dark);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(201, 162, 77, 0.3);
+    box-shadow: 0 5px 15px rgba(30, 111, 255, 0.18);
 }
 
 /* ===================== MAIN & SECTIONS ===================== */
@@ -214,19 +214,19 @@ section {
 
 section h2 {
     font-size: 2.5rem;
-    color: #3a2e22;
+    color: var(--text-dark);
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
 section h3 {
-    color: #6b503c;
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 1.2rem;
 }
 
 section p {
-    color: #555;
+    color: var(--muted);
     line-height: 1.8;
     font-size: 1.05rem;
 }
@@ -245,12 +245,12 @@ section.fade-in.appear {
 
 /* ===================== ABOUT SECTION ===================== */
 .about {
-    background: var(--cream);
-    color: #3a2e22;
+    background: var(--bg);
+    color: var(--text-dark);
 }
 
 .about-content {
-    background: #f3ece0;
+    background: #ffffff;
 }
 
 .about p {
@@ -261,14 +261,14 @@ section.fade-in.appear {
 
 /* ===================== ACTIVITIES SECTION ===================== */
 .activities {
-    background: var(--cream);
-    color: #3a2e22;
+    background: var(--bg);
+    color: var(--text-dark);
 }
 
 /* ===================== PAGE HEADER ===================== */
 .page-header {
     background: var(--bg-dark);
-    color: var(--cream);
+    color: var(--bg);
     padding: 150px 10% 80px;
     text-align: center;
 }
@@ -280,17 +280,17 @@ section.fade-in.appear {
 
 .page-header p {
     font-size: 1.2rem;
-    color: #e8dcc8;
+    color: var(--bg);
 }
 
 /* ===================== VALUES SECTION ===================== */
 .values {
-    background: var(--cream);
+    background: var(--bg);
 }
 
 /* ===================== HISTORY SECTION ===================== */
 .history {
-    background: var(--cream);
+    background: var(--bg);
 }
 
 .history p {
@@ -313,31 +313,31 @@ section.fade-in.appear {
     padding: 35px;
     width: 280px;
     border-radius: 22px;
-    box-shadow: 0 15px 35px rgba(90, 70, 50, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-align: center;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(90, 70, 50, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
-    color: #6b503c;
+    color: var(--accent-dark);
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
 
 .card p {
-    color: #555;
+    color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 /* ===================== MEMBERSHIP BENEFITS ===================== */
 .membership {
-    background: var(--cream);
+    background: var(--bg);
 }
 
 .benefit-list {
@@ -349,18 +349,18 @@ section.fade-in.appear {
 }
 
 .benefit {
-    background: #e9e0d4;
+    background: #f5f7fb;
     padding: 20px;
     border-radius: 12px;
-    color: #3a2e22;
+    color: var(--text-dark);
     font-size: 1.1rem;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(90, 70, 50, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
 /* ===================== GALLERY ===================== */
 .gallery {
-    background: #f3ece0;
+    background: #ffffff;
 }
 
 .gallery-grid {
@@ -373,14 +373,14 @@ section.fade-in.appear {
 .gallery-item {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(90, 70, 50, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: white;
 }
 
 .gallery-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(90, 70, 50, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-item img {
@@ -392,15 +392,15 @@ section.fade-in.appear {
 
 .gallery-item p {
     padding: 15px;
-    color: #3a2e22;
+    color: var(--text-dark);
     font-weight: 600;
-    background: #f9f5f0;
+    background: #f5f7fb;
 }
 
 /* ===================== CONTACT SECTION ===================== */
 .contact-section {
-    background: #f6f1e6;
-    color: #3a2e22;
+    background: #f5f7fb;
+    color: var(--text-dark);
 }
 
 .contact-container {
@@ -417,7 +417,7 @@ section.fade-in.appear {
 .contact-form h3 {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #3a2e22;
+    color: var(--text-dark);
 }
 
 .info-item {
@@ -432,7 +432,7 @@ section.fade-in.appear {
 }
 
 .info-item p {
-    color: #555;
+    color: var(--muted);
     text-align: left;
 }
 
@@ -452,7 +452,7 @@ section.fade-in.appear {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(90, 70, 50, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .form-group {
@@ -463,7 +463,7 @@ section.fade-in.appear {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #3a2e22;
+    color: var(--text-dark);
     font-weight: 600;
 }
 
@@ -471,36 +471,36 @@ section.fade-in.appear {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e9e0d4;
+    border: 2px solid #e9eef5;
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.3s;
-    color: #3a2e22;
+    color: var(--text-dark);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 5px rgba(166, 124, 53, 0.25);
+    box-shadow: 0 0 6px rgba(30, 111, 255, 0.18);
 }
 
 /* ===================== CTA SECTION ===================== */
 .cta {
     background: linear-gradient(to right, var(--bg-dark), var(--accent-dark));
-    color: var(--cream);
+    color: var(--bg);
     padding: 80px 10%;
 }
 
 .cta h2 {
-    color: #f5efe6;
+    color: var(--bg);
     margin-bottom: 30px;
 }
 
 /* ===================== TESTIMONIALS ===================== */
 .testimonials {
-    background: var(--cream);
+    background: var(--bg);
 }
 
 .testimonials-grid {
@@ -517,7 +517,7 @@ section.fade-in.appear {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(90, 70, 50, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     border-left: 5px solid var(--accent);
 }
 
@@ -537,7 +537,7 @@ section.fade-in.appear {
 
 /* ===================== EVENTS ===================== */
 .events {
-    background: var(--cream);
+    background: var(--bg);
 }
 
 .events-list {
@@ -554,41 +554,41 @@ section.fade-in.appear {
     background: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(90, 70, 50, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     border-top: 4px solid var(--accent);
     text-align: left;
 }
 
 .event-card h4 {
-    color: #3a2e22;
+    color: var(--text-dark);
     margin-bottom: 12px;
     font-size: 1.2rem;
 }
 
 .event-card p {
-    color: #555;
+    color: var(--muted);
     margin-bottom: 8px;
     line-height: 1.6;
 }
 
 .event-card p strong {
-    color: #8b6f4e;
+    color: var(--accent-dark);
 }
 
 /* ===================== NEWSLETTER ===================== */
 .newsletter {
     background: linear-gradient(135deg, var(--accent-dark) 0%, var(--bg-dark) 100%);
-    color: var(--cream);
+    color: var(--bg);
     padding: 80px 10%;
 }
 
 .newsletter h2 {
-    color: var(--cream);
+    color: var(--bg);
     margin-bottom: 15px;
 }
 
 .newsletter p {
-    color: rgba(245,242,234,0.9);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 30px;
     font-size: 1.1rem;
 }
@@ -609,7 +609,7 @@ section.fade-in.appear {
     border: none;
     border-radius: 8px;
     font-size: 1rem;
-    color: #3a2e22;
+    color: var(--text-dark);
 }
 
 .newsletter-form input::placeholder {
@@ -628,14 +628,14 @@ section.fade-in.appear {
 }
 
 .member-login:hover {
-    background: var(--cream) !important;
+    background: var(--bg) !important;
     color: var(--accent-dark) !important;
     transform: scale(1.05) !important;
 }
 
 /* ===================== PRICING ===================== */
 .pricing {
-    background: #f6f1e6;
+    background: #f5f7fb;
 }
 
 .pricing-grid {
@@ -652,7 +652,7 @@ section.fade-in.appear {
     background: white;
     padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(90, 70, 50, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -660,7 +660,7 @@ section.fade-in.appear {
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(90, 70, 50, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
 .pricing-card.featured {
@@ -682,7 +682,7 @@ section.fade-in.appear {
 }
 
 .pricing-card h3 {
-    color: #3a2e22;
+    color: var(--text-dark);
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
@@ -696,7 +696,7 @@ section.fade-in.appear {
 
 .price span {
     font-size: 1rem;
-    color: #555;
+    color: var(--muted);
     display: block;
 }
 
@@ -704,7 +704,7 @@ section.fade-in.appear {
     list-style: none;
     margin: 30px 0;
     text-align: left;
-    color: #555;
+    color: var(--muted);
 }
 
 .price-features li {
@@ -719,7 +719,7 @@ section.fade-in.appear {
 
 /* ===================== COMPARISON TABLE ===================== */
 .comparison {
-    background: #f3ece0;
+    background: #f5f7fb;
 }
 
 .table-responsive {
@@ -732,21 +732,21 @@ section.fade-in.appear {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    box-shadow: 0 10px 25px rgba(90, 70, 50, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     overflow: hidden;
 }
 
 .comparison-table thead {
     background: var(--accent-dark);
-    color: var(--cream);
+    color: var(--bg);
 }
 
 .comparison-table th,
 .comparison-table td {
     padding: 18px 20px;
     text-align: left;
-    border-bottom: 1px solid #e9e0d4;
+    border-bottom: 1px solid #e9eef5;
 }
 
 .comparison-table th {
@@ -755,7 +755,7 @@ section.fade-in.appear {
 }
 
 .comparison-table tr:hover {
-    background: #f9f5f0;
+    background: #f5f7fb;
 }
 
 .comparison-table tbody tr:last-child td {
@@ -764,12 +764,12 @@ section.fade-in.appear {
 
 /* ===================== WHY CHOOSE ===================== */
 .why-choose {
-    background: #f6f1e6;
+    background: #f5f7fb;
 }
 
 /* ===================== FAQ ===================== */
 .faq-section {
-    background: #f6f1e6;
+    background: #f5f7fb;
 }
 
 .faq-container {
@@ -782,7 +782,7 @@ section.fade-in.appear {
 }
 
 .faq-group h2 {
-    color: #3a2e22;
+    color: var(--text-dark);
     margin-bottom: 30px;
     font-size: 1.8rem;
     text-align: left;
@@ -793,7 +793,7 @@ section.fade-in.appear {
     background: white;
     margin-bottom: 15px;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(90, 70, 50, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
@@ -801,20 +801,20 @@ section.fade-in.appear {
     width: 100%;
     padding: 20px;
     border: none;
-    background: #f9f5f0;
+    background: #f5f7fb;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
     font-size: 1.05rem;
-    color: #3a2e22;
+    color: var(--text-dark);
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .faq-question:hover {
-    background: #f0e8dc;
+    background: #eef3fb;
 }
 
 .faq-icon {
@@ -825,9 +825,9 @@ section.fade-in.appear {
 
 .faq-answer {
     padding: 25px 20px;
-    color: #555;
+    color: var(--muted);
     line-height: 1.8;
-    border-top: 1px solid #e9e0d4;
+    border-top: 1px solid #e9eef5;
 }
 
 .faq-answer a {
@@ -865,7 +865,7 @@ section.fade-in.appear {
 }
 
 .footer-section a {
-    color: var(--cream);
+    color: var(--bg);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -891,14 +891,14 @@ section.fade-in.appear {
 
 footer {
     background: var(--bg-dark);
-    color: var(--cream);
+    color: var(--bg);
     padding: 50px 10%;
     text-align: center;
     font-size: 0.95rem;
 }
 
 footer p {
-    color: var(--cream);
+    color: var(--bg);
 }
 
 /* ===================== ANIMATIONS ===================== */
@@ -1142,4 +1142,120 @@ footer p {
     .price {
         font-size: 2rem;
     }
+}
+
+/* ===================== UTILITIES ===================== */
+.muted {
+    color: var(--muted) !important;
+}
+.italic {
+    font-style: italic;
+}
+.flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+.card-flex {
+    flex: 1;
+    min-width: 200px;
+}
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.hr-faint {
+    border: none;
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    opacity: 0.3;
+    margin: 20px 0;
+}
+.text-light {
+    color: var(--bg) !important;
+}
+
+/* Accessibility helpers */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--bg-dark);
+    color: var(--bg);
+    z-index: 2000;
+    border-radius: 4px;
+}
+
+/* Visible focus states */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid rgba(30,111,255,0.25);
+    outline-offset: 2px;
+}
+
+/* Responsive images */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Nav current link */
+.nav-links a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Hero carousel + typing */
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active { opacity: 1; }
+
+.overlay {
+    position: relative;
+    text-align: center;
+    color: var(--bg);
+    padding: 20px;
+    z-index: 10;
+    max-width: 1000px;
+}
+
+.overlay h1 { font-size: 3rem; margin-bottom: 8px; }
+.overlay .typed { font-size: 1.6rem; display:block; height:2.2rem; }
+
+/* small devices */
+@media (max-width: 768px) {
+    .hero { height: 60vh; min-height: 380px; }
+    .overlay h1 { font-size: 2rem; }
+    .overlay .typed { font-size: 1rem; height:1.4rem; }
 }
