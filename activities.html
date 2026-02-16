@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,30 +22,49 @@
     }
     </script>
 </head>
+
 <body>
 
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo"><img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo"></div>
-        <button class="hamburger" id="hamburger">
+        <!-- 1. Left: Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo">
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav class="nav-links" id="nav-links">
-            <a href="index.html" title="Home">Home</a>
-            <a href="about.html" title="About us">About</a>
-            <a href="services.html" title="Our services">Services</a>
-            <a href="activities.html" title="Our activities" aria-current="page">Activities</a>
-            <a href="membership.html" title="Membership plans">Membership</a>
-            <a href="board-members.html" title="Board members">Board</a>
-            <a href="gallery.html" title="Photo gallery">Gallery</a>
-            <a href="faq.html" title="FAQ">FAQ</a>
-            <a href="contact.html" title="Contact us">Contact</a>
-            <a href="#" title="Member login" class="member-login">👤 Login</a>
-        </nav>
+
+        <!-- Wrapper for Center Nav and Right Actions -->
+        <div id="nav-menu" class="nav-menu">
+            <!-- 2. Center: Navigation Links -->
+            <nav class="nav-center">
+                <a href="index.html" title="Home">Home</a>
+                <a href="about.html" title="About us">About</a>
+                <a href="services.html" title="Our services">Services</a>
+                <a href="activities.html" title="Our activities" aria-current="page">Activities</a>
+                <a href="membership.html" title="Membership plans">Membership</a>
+                <a href="board-members.html" title="Board members">Board</a>
+                <a href="gallery.html" title="Photo gallery">Gallery</a>
+                <a href="faq.html" title="FAQ">FAQ</a>
+                <a href="contact.html" title="Contact us">Contact</a>
+            </nav>
+
+            <!-- 3. Right: Action Items -->
+            <div class="nav-right">
+                <a href="#" title="Member login" class="member-login">
+                    <i class="fa-solid fa-circle-user"></i> Login
+                </a>
+                <a href="membership.html" class="btn btn-sm">Join Now</a>
+            </div>
+        </div>
     </header>
 
     <main id="main-content">
@@ -55,27 +75,28 @@
         </section>
 
         <!-- ACTIVITIES LIST -->
-        <section class="activities fade-in">
+        <section class="activities fade-in bg-white">
             <h2>Year-Round Experiences</h2>
             <div class="cards">
                 <div class="card">
                     <h3>🏖️ Private Beach Access</h3>
-                    <p>Enjoy a clean, peaceful, and modest beach environment exclusively for our members. 
-                    Perfect for swimming, relaxation, and water activities.</p>
+                    <p>Enjoy a clean, peaceful, and modest beach environment exclusively for our members.
+                        Perfect for swimming, relaxation, and water activities.</p>
                 </div>
                 <div class="card">
                     <h3>👨‍👩‍👧‍👦 Family Recreation</h3>
-                    <p>Dedicated picnic zones, children's play areas, and family gathering spaces with BBQ facilities 
-                    and comfortable seating areas.</p>
+                    <p>Dedicated picnic zones, children's play areas, and family gathering spaces with BBQ facilities
+                        and comfortable seating areas.</p>
                 </div>
                 <div class="card">
                     <h3>🕌 Islamic Events</h3>
-                    <p>Host Nikkah ceremonies, Islamic lectures, Quran recitation circles, and community programs 
-                    throughout the year.</p>
+                    <p>Host Nikkah ceremonies, Islamic lectures, Quran recitation circles, and community programs
+                        throughout the year.</p>
                 </div>
                 <div class="card">
                     <h3>🍽️ Halal Dining</h3>
-                    <p>Premium halal restaurant and café offering traditional and modern cuisine with stunning ocean views.</p>
+                    <p>Premium halal restaurant and café offering traditional and modern cuisine with stunning ocean
+                        views.</p>
                 </div>
                 <div class="card">
                     <h3>⚽ Sports & Recreation</h3>
@@ -89,7 +110,7 @@
         </section>
 
         <!-- MEMBERSHIP BENEFITS -->
-        <section class="membership fade-in">
+        <section class="membership fade-in bg-light">
             <h2>Membership Benefits</h2>
             <div class="benefit-list">
                 <div class="benefit">✓ Unlimited beach access</div>
@@ -140,19 +161,19 @@
     <script>
         // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        
-        if (hamburger && navLinks) {
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
+                navMenu.classList.toggle('active');
             });
-            
+
             // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
+            navMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
+                    navMenu.classList.remove('active');
                 });
             });
         }
@@ -164,7 +185,7 @@
             rootMargin: "0px 0px -50px 0px"
         };
 
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 entry.target.classList.add('appear');
@@ -178,4 +199,5 @@
     </script>
 
 </body>
+
 </html>

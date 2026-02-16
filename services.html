@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daressalaam Islamic Club Services - Education, Worship, Charity, Recreation, and Community Events.">
+    <meta name="description"
+        content="Daressalaam Islamic Club Services - Education, Worship, Charity, Recreation, and Community Events.">
     <title>Services - Daressalaam Islamic Club</title>
     <link rel="canonical" href="https://daressalaamislamicclub.com/services.html">
     <meta property="og:title" content="Services - Daressalaam Islamic Club">
-    <meta property="og:description" content="Education, worship, charity, and recreation services provided by Daressalaam Islamic Club.">
+    <meta property="og:description"
+        content="Education, worship, charity, and recreation services provided by Daressalaam Islamic Club.">
     <meta property="og:url" content="https://daressalaamislamicclub.com/services.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -27,30 +30,49 @@
     }
     </script>
 </head>
+
 <body>
 
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo"><img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo"></div>
-        <button class="hamburger" id="hamburger">
+        <!-- 1. Left: Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Daressalaam Islamic Club" class="site-logo">
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav class="nav-links" id="nav-links">
-            <a href="index.html" title="Home">Home</a>
-            <a href="about.html" title="About us">About</a>
-            <a href="services.html" title="Our services" aria-current="page">Services</a>
-            <a href="activities.html" title="Our activities">Activities</a>
-            <a href="membership.html" title="Membership plans">Membership</a>
-            <a href="board-members.html" title="Board members">Board</a>
-            <a href="gallery.html" title="Photo gallery">Gallery</a>
-            <a href="faq.html" title="FAQ">FAQ</a>
-            <a href="contact.html" title="Contact us">Contact</a>
-            <a href="#" title="Member login" class="member-login">👤 Login</a>
-        </nav>
+
+        <!-- Wrapper for Center Nav and Right Actions -->
+        <div id="nav-menu" class="nav-menu">
+            <!-- 2. Center: Navigation Links -->
+            <nav class="nav-center">
+                <a href="index.html" title="Home">Home</a>
+                <a href="about.html" title="About us">About</a>
+                <a href="services.html" title="Our services" aria-current="page">Services</a>
+                <a href="activities.html" title="Our activities">Activities</a>
+                <a href="membership.html" title="Membership plans">Membership</a>
+                <a href="board-members.html" title="Board members">Board</a>
+                <a href="gallery.html" title="Photo gallery">Gallery</a>
+                <a href="faq.html" title="FAQ">FAQ</a>
+                <a href="contact.html" title="Contact us">Contact</a>
+            </nav>
+
+            <!-- 3. Right: Action Items -->
+            <div class="nav-right">
+                <a href="#" title="Member login" class="member-login">
+                    <i class="fa-solid fa-circle-user"></i> Login
+                </a>
+                <a href="membership.html" class="btn btn-sm">Join Now</a>
+            </div>
+        </div>
     </header>
 
     <main id="main-content">
@@ -61,15 +83,17 @@
         </section>
 
         <!-- EDUCATION -->
-        <section class="service-section fade-in">
+        <section class="service-section fade-in bg-white">
             <div class="service-container">
                 <div class="service-content">
                     <h2>🎓 Education</h2>
                     <p>
                         We are committed to promoting Islamic education and knowledge development within our community.
-                        Our educational programs include Islamic studies and Quranic teachings, lectures on contemporary 
-                        Islamic topics, community workshops and seminars, youth development programs, and knowledge circles 
-                        and study groups. Education strengthens our community and helps us live according to Islamic principles.
+                        Our educational programs include Islamic studies and Quranic teachings, lectures on contemporary
+                        Islamic topics, community workshops and seminars, youth development programs, and knowledge
+                        circles
+                        and study groups. Education strengthens our community and helps us live according to Islamic
+                        principles.
                     </p>
                     <p class="muted italic" style="margin-top: 15px;">
                         <strong>Led by:</strong> Education Officer
@@ -79,15 +103,19 @@
         </section>
 
         <!-- WORSHIP -->
-        <section class="service-section fade-in">
+        <section class="service-section fade-in bg-light">
             <div class="service-container">
                 <div class="service-content">
                     <h2>🕌 Worship Facilities</h2>
                     <p>
-                        We provide dedicated spaces for prayer and worship, ensuring a peaceful and respectful environment
-                        for all our members. We offer prayer facilities for all five daily prayers, separate prayer areas 
-                        for men and women, ablution (Wudu) facilities, Quranic recitation sessions, and special arrangements 
-                        for Friday prayers and Islamic holidays. Worship is at the heart of our mission to strengthen faith 
+                        We provide dedicated spaces for prayer and worship, ensuring a peaceful and respectful
+                        environment
+                        for all our members. We offer prayer facilities for all five daily prayers, separate prayer
+                        areas
+                        for men and women, ablution (Wudu) facilities, Quranic recitation sessions, and special
+                        arrangements
+                        for Friday prayers and Islamic holidays. Worship is at the heart of our mission to strengthen
+                        faith
                         and community bonds.
                     </p>
                     <p class="muted italic" style="margin-top: 15px;">
@@ -98,14 +126,16 @@
         </section>
 
         <!-- CHARITY -->
-        <section class="service-section fade-in">
+        <section class="service-section fade-in bg-white">
             <div class="service-container">
                 <div class="service-content">
                     <h2>❤️ Charity & Community Support</h2>
                     <p>
                         Zakat and charitable giving are pillars of Islam. We facilitate community support and social
-                        responsibility initiatives including zakat collection and distribution, community relief programs, 
-                        support for needy families, educational scholarships, healthcare and wellness initiatives, and disaster 
+                        responsibility initiatives including zakat collection and distribution, community relief
+                        programs,
+                        support for needy families, educational scholarships, healthcare and wellness initiatives, and
+                        disaster
                         relief efforts. Working together to ensure no one in our community is left behind.
                     </p>
                     <p class="muted italic" style="margin-top: 15px;">
@@ -116,15 +146,19 @@
         </section>
 
         <!-- RECREATION -->
-        <section class="service-section fade-in">
+        <section class="service-section fade-in bg-white">
             <div class="service-container">
                 <div class="service-content">
                     <h2>⛱️ Recreation & Events</h2>
                     <p>
-                        We provide family-friendly recreational facilities and host a variety of community events in a halal
-                        and modest environment. Our offerings include private beach access and facilities, family picnic areas 
-                        and gathering spaces, sports and outdoor activities, wedding and ceremony venues (Nikkah), multi-purpose 
-                        hall for events and banquets, community celebrations and festivals, and family entertainment programs. 
+                        We provide family-friendly recreational facilities and host a variety of community events in a
+                        halal
+                        and modest environment. Our offerings include private beach access and facilities, family picnic
+                        areas
+                        and gathering spaces, sports and outdoor activities, wedding and ceremony venues (Nikkah),
+                        multi-purpose
+                        hall for events and banquets, community celebrations and festivals, and family entertainment
+                        programs.
                         Creating joyful memories while maintaining Islamic principles and family values.
                     </p>
                     <p class="muted italic" style="margin-top: 15px;">
@@ -135,15 +169,18 @@
         </section>
 
         <!-- MULTI-PURPOSE HALL -->
-        <section class="service-section fade-in">
+        <section class="service-section fade-in bg-white">
             <div class="service-container">
                 <div class="service-content">
                     <h2>🏛️ Multi-Purpose Hall & Expansion Projects</h2>
                     <p>
                         We are planning to build a state-of-the-art multi-purpose hall that will serve as a hub for our
-                        expanding community activities. The facility will be available for rent for halal weddings and ceremonies, 
-                        banquets and catering services, conference and seminar facilities, community gatherings and cultural events, 
-                        and educational workshops and lectures. This represents our vision for growth and enhanced service delivery 
+                        expanding community activities. The facility will be available for rent for halal weddings and
+                        ceremonies,
+                        banquets and catering services, conference and seminar facilities, community gatherings and
+                        cultural events,
+                        and educational workshops and lectures. This represents our vision for growth and enhanced
+                        service delivery
                         to the Muslim community across Tanzania.
                     </p>
                 </div>
@@ -218,19 +255,19 @@
     <script>
         // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        
-        if (hamburger && navLinks) {
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
+                navMenu.classList.toggle('active');
             });
-            
+
             // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
+            navMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
+                    navMenu.classList.remove('active');
                 });
             });
         }
@@ -242,7 +279,7 @@
             rootMargin: "0px 0px -50px 0px"
         };
 
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 entry.target.classList.add('appear');
@@ -256,130 +293,5 @@
     </script>
 
 </body>
-</html>
 
-                        <li>Multi-purpose hall for events and banquets</li>
-                        <li>Community celebrations and festivals</li>
-                        <li>Family entertainment programs</li>
-                    </ul>
-                    <p>Creating joyful memories while maintaining Islamic principles and family values.</p>
-                </div> Our offerings include private beach access and facilities, family picnic areas 
-                        and gathering spaces, sports and outdoor activities, wedding and ceremony venues (Nikkah), multi-purpose 
-                        hall for events and banquets, community celebrations and festivals, and family entertainment programs. 
-                        Creating joyful memories while maintaining Islamic principles and family values.
-                    
-                    </p>
-                    <ul>
-                        <li>Available for rent for halal weddings and ceremonies</li>
-                        <li>Banquets and catering services</li>
-                        <li>Conference and seminar facilities</li>
-                        <li>Community gatherings and cultural events</li>
-                        <li>Educational workshops and lectures</li>
-                        <li>Expansion of facilities to serve the growing community</li>
-                    </ul>
-                    <p>A vision for growth and enhanced service delivery to the Muslim community across Tanzania.</p>
-                </div>
-            </div>
-        </section>
-. The facility will be available for rent for halal weddings and ceremonies, 
-                        banquets and catering services, conference and seminar facilities, community gatherings and cultural events, 
-                        and educational workshops and lectures. This represents our vision for growth and enhanced service delivery 
-                        to the Muslim community across Tanzania.
-                    
-                    <p>Fostering mutual respect between Muslims and non-Muslims</p>
-                </div>
-                <div class="card">
-                    <h3>✅ Excellence</h3>
-                    <p>Delivering high-quality services with integrity and professionalism</p>
-                </div>
-                <div class="card">
-                    <h3>📈 Growth</h3>
-                    <p>Building sustainable programs that serve present and future generations</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta fade-in">
-            <h2>Ready to Be Part of Our Community?</h2>
-            <a href="membership.html" class="btn">Explore Membership</a>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="membership.html">Membership</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Contact</h5>
-                <ul>
-                    <li><a href="tel:+255767432432">📞 +255 767 432 432</a></li>
-                    <li><a href="mailto:dic@islamiclub.org">📧 dic@islamiclub.org</a></li>
-                    <li><a href="https://wa.me/255767432432" target="_blank" rel="noopener">💬 WhatsApp</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Follow Us</h5>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook" title="Facebook">📘</a>
-                    <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-                    <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
-                    <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
-                </div>
-            </div>
-        </div>
-        <hr class="hr-faint">
-        <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
-    </footer>
-
-    <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
-
-        // Simple fade-in on scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.2,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
-
-</body>
 </html>
