@@ -189,6 +189,7 @@ body {
         padding: 80px 0;
         overflow-y: auto;
         box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1102;
     }
 
     .nav-menu.active {
@@ -206,6 +207,9 @@ body {
         transition: opacity 0.28s ease;
         pointer-events: none;
     }
+
+    /* ensure hamburger toggler remains above the backdrop */
+    .hamburger { z-index: 1110; }
 
     .menu-backdrop.show {
         opacity: 1;
