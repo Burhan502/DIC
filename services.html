@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+        }
+    </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sticky CTA (mobile) -->
+    <div class="sticky-cta" aria-hidden="false">
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+
+</body>
     <meta name="description"
         content="Daressalaam Islamic Club Services - Education, Worship, Charity, Recreation, and Community Events.">
     <title>Services - Daressalaam Islamic Club</title>
@@ -214,22 +219,56 @@
     </footer>
 
     <script>
-        // Hamburger Menu Toggle
+        // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
+        function createBackdrop() {
+            let bd = document.querySelector('.menu-backdrop');
+            if (!bd) {
+                bd = document.createElement('div');
+                bd.className = 'menu-backdrop';
+                document.body.appendChild(bd);
+            }
+            return bd;
+        }
+
+        function openMenu() {
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            const bd = createBackdrop();
+            setTimeout(() => bd.classList.add('show'), 10);
+            bd.addEventListener('click', closeMenu);
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            const bd = document.querySelector('.menu-backdrop');
+            if (bd) {
+                bd.classList.remove('show');
+                setTimeout(() => bd.remove(), 300);
+            }
+            document.body.classList.remove('menu-open');
+        }
+
         if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
+                if (navMenu.classList.contains('active')) closeMenu();
+                else openMenu();
             });
 
             // Close menu when a link is clicked
             navMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
+                    closeMenu();
                 });
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
             });
         }
 
