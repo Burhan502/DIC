@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Meet the Board Members of Daressalaam Islamic Club - Leadership team dedicated to community service.">
+    <meta name="description" content="Meet the Board Members and Leadership of Daressalaam Islamic Club.">
     <title>Board Members - Daressalaam Islamic Club</title>
     <link rel="canonical" href="https://daressalaamislamicclub.com/board-members.html">
     <meta property="og:title" content="Board Members - Daressalaam Islamic Club">
-    <meta property="og:description"
-        content="Meet our dedicated leadership team guiding Daressalaam Islamic Club with integrity and excellence.">
+    <meta property="og:description" content="Meet the Board Members and Leadership of Daressalaam Islamic Club.">
     <meta property="og:url" content="https://daressalaamislamicclub.com/board-members.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -19,9 +17,78 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Daressalaam Islamic Club",
+      "description": "Board Members and Leadership Team",
       "url": "https://daressalaamislamicclub.com"
     }
     </script>
+    <style>
+        .board-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .board-member {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .board-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--bg);
+        }
+
+        .member-info {
+            padding: 20px;
+            color: var(--bg);
+        }
+
+        .member-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 20px;
+        }
+
+        .member-position {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .member-bio {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .leadership-intro {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,8 +147,10 @@
             <div class="leadership-intro">
                 <p>
                     The Board of Directors and leadership team of Daressalaam Islamic Club are committed to serving our
-                    community with integrity, vision, and dedication. Each member brings unique expertise and a deep commitment to
-                    our mission of promoting unity, Islamic values, and community welfare.
+                    community
+                    with integrity, vision, and dedication. Each member brings unique expertise and a deep commitment to
+                    our mission
+                    of promoting unity, Islamic values, and community welfare.
                 </p>
             </div>
         </section>
@@ -92,86 +161,102 @@
             <p class="muted" style="text-align: center; margin-bottom: 40px;">Dedicated leaders serving our community
             </p>
 
-            <div class="cards">
+            <div class="board-grid">
                 <!-- Chairman -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">👨‍💼</span>
-                    <h3>Chairman</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Leadership & Vision</p>
-                    <p>
-                        Providing strategic direction and ensuring the club's mission is fulfilled with excellence
-                        and integrity.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">👨‍💼</div>
+                    <div class="member-info">
+                        <h3>Chairman</h3>
+                        <p class="member-position">Leadership & Vision</p>
+                        <p class="member-bio">
+                            Providing strategic direction and ensuring the club's mission is fulfilled with excellence
+                            and integrity.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Vice Chairman -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">👨‍💼</span>
-                    <h3>Vice Chairman</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Operations & Support</p>
-                    <p>
-                        Supporting the Chairman and overseeing day-to-day operations and member services.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">👨‍💼</div>
+                    <div class="member-info">
+                        <h3>Vice Chairman</h3>
+                        <p class="member-position">Operations & Support</p>
+                        <p class="member-bio">
+                            Supporting the Chairman and overseeing day-to-day operations and member services.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Treasurer -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">💼</span>
-                    <h3>Treasurer</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Finance & Resources</p>
-                    <p>
-                        Managing financial resources and ensuring transparent, sustainable operations.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">💼</div>
+                    <div class="member-info">
+                        <h3>Treasurer</h3>
+                        <p class="member-position">Finance & Resources</p>
+                        <p class="member-bio">
+                            Managing financial resources and ensuring transparent, sustainable operations.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Secretary -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">📋</span>
-                    <h3>Secretary</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Administration & Records</p>
-                    <p>
-                        Maintaining records, coordinating communications, and ensuring organizational excellence.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">📋</div>
+                    <div class="member-info">
+                        <h3>Secretary</h3>
+                        <p class="member-position">Administration & Records</p>
+                        <p class="member-bio">
+                            Maintaining records, coordinating communications, and ensuring organizational excellence.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Education Officer -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">🎓</span>
-                    <h3>Education Officer</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Islamic Education Programs</p>
-                    <p>
-                        Leading educational initiatives and promoting Islamic knowledge within the community.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">🎓</div>
+                    <div class="member-info">
+                        <h3>Education Officer</h3>
+                        <p class="member-position">Islamic Education Programs</p>
+                        <p class="member-bio">
+                            Leading educational initiatives and promoting Islamic knowledge within the community.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Community Officer -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">🤝</span>
-                    <h3>Community Officer</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Community Engagement & Welfare</p>
-                    <p>
-                        Building community bonds and supporting member welfare and charitable initiatives.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">🤝</div>
+                    <div class="member-info">
+                        <h3>Community Officer</h3>
+                        <p class="member-position">Community Engagement & Welfare</p>
+                        <p class="member-bio">
+                            Building community bonds and supporting member welfare and charitable initiatives.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Sports & Recreation Officer -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">⚽</span>
-                    <h3>Sports & Recreation Officer</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Activities & Events</p>
-                    <p>
-                        Organizing sporting events, recreation programs, and family entertainment.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">⚽</div>
+                    <div class="member-info">
+                        <h3>Sports & Recreation Officer</h3>
+                        <p class="member-position">Activities & Events</p>
+                        <p class="member-bio">
+                            Organizing sporting events, recreation programs, and family entertainment.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Spiritual Advisor -->
-                <div class="card">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 15px;">🕌</span>
-                    <h3>Spiritual Advisor</h3>
-                    <p style="color: var(--accent); font-weight: 500; margin: 8px 0;">Religious Guidance</p>
-                    <p>
-                        Providing Islamic guidance and ensuring all activities align with Islamic principles.
-                    </p>
+                <div class="board-member">
+                    <div class="member-image">🕌</div>
+                    <div class="member-info">
+                        <h3>Spiritual Advisor</h3>
+                        <p class="member-position">Religious Guidance</p>
+                        <p class="member-bio">
+                            Providing Islamic guidance and ensuring all activities align with Islamic principles.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -243,12 +328,6 @@
         <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
-    <!-- Sticky CTA (mobile) -->
-    <div class="sticky-cta" aria-hidden="false">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-
-    <!-- Hamburger Menu and Animations Script -->
     <script>
         // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
@@ -322,9 +401,6 @@
             appearOnScroll.observe(fader);
         });
     </script>
-
-    <!-- Swipe Navigation -->
-    <script src="js/swipe-nav.js"></script>
 
 </body>
 

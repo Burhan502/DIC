@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+        }
+    </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sticky CTA (mobile) -->
+    <div class="sticky-cta" aria-hidden="false">
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+
+</body>
     <meta name="description"
-        content="Daressalaam Islamic Club Activities - Private beach, family recreation, Islamic events, sports, and dining.">
-    <title>Activities - Daressalaam Islamic Club</title>
-    <link rel="canonical" href="https://daressalaamislamicclub.com/activities.html">
-    <meta property="og:title" content="Activities - Daressalaam Islamic Club">
+        content="Learn about Daressalaam Islamic Club - A premium halal beach and leisure club built on Islamic values.">
+    <title>About - Daressalaam Islamic Club</title>
+    <link rel="canonical" href="https://daressalaamislamicclub.com/about.html">
+    <meta property="og:title" content="About - Daressalaam Islamic Club">
     <meta property="og:description"
-        content="Explore our year-round activities including beach access, family recreation, Islamic events, and sports.">
-    <meta property="og:url" content="https://daressalaamislamicclub.com/activities.html">
+        content="Learn about Daressalaam Islamic Club - mission, vision, and community values.">
+    <meta property="og:url" content="https://daressalaamislamicclub.com/about.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "Organization",
       "name": "Daressalaam Islamic Club",
-      "description": "Premium halal beach club with family recreation and Islamic events",
+      "description": "A premium halal beach and leisure club built on Islamic principles",
+      "founded": "2025",
       "url": "https://daressalaamislamicclub.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dar es Salaam",
-        "addressCountry": "TZ"
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "telephone": "+255-XXX-XXXX"
       }
     }
     </script>
@@ -54,9 +60,9 @@
             <!-- 2. Center: Navigation Links -->
             <nav class="nav-center">
                 <a href="index.html" title="Home">Home</a>
-                <a href="about.html" title="About us">About</a>
+                <a href="about.html" title="About us" aria-current="page">About</a>
                 <a href="services.html" title="Our services">Services</a>
-                <a href="activities.html" title="Our activities" aria-current="page">Activities</a>
+                <a href="activities.html" title="Our activities">Activities</a>
                 <a href="membership.html" title="Membership plans">Membership</a>
                 <a href="board-members.html" title="Board members">Board</a>
                 <a href="gallery.html" title="Photo gallery">Gallery</a>
@@ -77,57 +83,56 @@
     <main id="main-content">
         <!-- PAGE HEADER -->
         <section class="page-header">
-            <h1>Our Activities</h1>
-            <p>Explore the experiences we offer</p>
+            <h1>About Us</h1>
+            <p>Discover our mission and values</p>
         </section>
 
-        <!-- ACTIVITIES LIST -->
-        <section class="activities fade-in bg-white">
-            <h2>Year-Round Experiences</h2>
+        <!-- MISSION & VISION CARDS -->
+        <section class="about fade-in">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission-vision-grid">
+                <div class="mission-vision-card">
+                    <span class="icon">🎯</span>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To promote unity, tolerance, and progress among Muslims, while also fostering peaceful coexistence
+                        and mutual respect between Muslims and non-Muslims. We serve as a hub for community engagement,
+                        education, and spiritual growth.
+                    </p>
+                </div>
+                <div class="mission-vision-card">
+                    <span class="icon">🌟</span>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To build a thriving community centered on Islamic values and excellence. We envision creating
+                        multi-purpose facilities available for rent to host weddings, banquets, and cultural
+                        gatherings. A place where every member feels valued and every activity strengthens our bonds.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="values fade-in">
+            <h2>Our Core Values</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>🏖️ Private Beach Access</h3>
-                    <p>Enjoy a clean, peaceful, and modest beach environment exclusively for our members.
-                        Perfect for swimming, relaxation, and water activities.</p>
+                    <h3>🕌 Islamic Principles</h3>
+                    <p>Everything we do is guided by Islamic teachings and values.</p>
                 </div>
                 <div class="card">
-                    <h3>👨‍👩‍👧‍👦 Family Recreation</h3>
-                    <p>Dedicated picnic zones, children's play areas, and family gathering spaces with BBQ facilities
-                        and comfortable seating areas.</p>
+                    <h3>👨‍👩‍👧‍👦 Family First</h3>
+                    <p>We create safe, welcoming spaces for families to bond and celebrate together.</p>
                 </div>
                 <div class="card">
-                    <h3>🕌 Islamic Events</h3>
-                    <p>Host Nikkah ceremonies, Islamic lectures, Quran recitation circles, and community programs
-                        throughout the year.</p>
+                    <h3>🌍 Environmental Care</h3>
+                    <p>We respect and protect the natural beauty of our coastal environment.</p>
                 </div>
                 <div class="card">
-                    <h3>🍽️ Halal Dining</h3>
-                    <p>Premium halal restaurant and café offering traditional and modern cuisine with stunning ocean
-                        views.</p>
-                </div>
-                <div class="card">
-                    <h3>⚽ Sports & Recreation</h3>
-                    <p>Volleyball, football, badminton courts and fitness facilities for active members.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Educational Workshops</h3>
-                    <p>Regular workshops on Islamic topics, health, wellness, and personal development.</p>
+                    <h3>🤝 Community</h3>
+                    <p>Building strong connections and fostering unity among our members.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- MEMBERSHIP BENEFITS -->
-        <section class="membership fade-in bg-light">
-            <h2>Membership Benefits</h2>
-            <div class="benefit-list">
-                <div class="benefit">✓ Unlimited beach access</div>
-                <div class="benefit">✓ Priority booking for events</div>
-                <div class="benefit">✓ Discounts on dining and services</div>
-                <div class="benefit">✓ Exclusive member events</div>
-                <div class="benefit">✓ Family guest privileges</div>
-                <div class="benefit">✓ Seasonal special promotions</div>
-            </div>
-            <a href="contact.html" class="btn">Join Us Today</a>
         </section>
     </main>
 
@@ -165,12 +170,6 @@
         <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
-    <!-- Sticky CTA (mobile) -->
-    <div class="sticky-cta" aria-hidden="false">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-
-    <!-- Hamburger Menu and Animations Script -->
     <script>
         // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
@@ -244,9 +243,6 @@
             appearOnScroll.observe(fader);
         });
     </script>
-
-    <!-- Swipe Navigation -->
-    <script src="js/swipe-nav.js"></script>
 
 </body>
 

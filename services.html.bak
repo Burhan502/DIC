@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+        }
+    </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sticky CTA (mobile) -->
+    <div class="sticky-cta" aria-hidden="false">
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+
+</body>
     <meta name="description"
-        content="Daressalaam Islamic Club Activities - Private beach, family recreation, Islamic events, sports, and dining.">
-    <title>Activities - Daressalaam Islamic Club</title>
-    <link rel="canonical" href="https://daressalaamislamicclub.com/activities.html">
-    <meta property="og:title" content="Activities - Daressalaam Islamic Club">
+        content="Daressalaam Islamic Club Services - Education, Worship, Charity, Recreation, and Community Events.">
+    <title>Services - Daressalaam Islamic Club</title>
+    <link rel="canonical" href="https://daressalaamislamicclub.com/services.html">
+    <meta property="og:title" content="Services - Daressalaam Islamic Club">
     <meta property="og:description"
-        content="Explore our year-round activities including beach access, family recreation, Islamic events, and sports.">
-    <meta property="og:url" content="https://daressalaamislamicclub.com/activities.html">
+        content="Education, worship, charity, and recreation services provided by Daressalaam Islamic Club.">
+    <meta property="og:url" content="https://daressalaamislamicclub.com/services.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
@@ -19,10 +24,11 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Daressalaam Islamic Club",
-      "description": "Premium halal beach club with family recreation and Islamic events",
+      "description": "Providing Education, Worship, Charity and Recreation services to the Muslim community",
       "url": "https://daressalaamislamicclub.com",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "P.O. Box 2590",
         "addressLocality": "Dar es Salaam",
         "addressCountry": "TZ"
       }
@@ -55,8 +61,8 @@
             <nav class="nav-center">
                 <a href="index.html" title="Home">Home</a>
                 <a href="about.html" title="About us">About</a>
-                <a href="services.html" title="Our services">Services</a>
-                <a href="activities.html" title="Our activities" aria-current="page">Activities</a>
+                <a href="services.html" title="Our services" aria-current="page">Services</a>
+                <a href="activities.html" title="Our activities">Activities</a>
                 <a href="membership.html" title="Membership plans">Membership</a>
                 <a href="board-members.html" title="Board members">Board</a>
                 <a href="gallery.html" title="Photo gallery">Gallery</a>
@@ -77,57 +83,103 @@
     <main id="main-content">
         <!-- PAGE HEADER -->
         <section class="page-header">
-            <h1>Our Activities</h1>
-            <p>Explore the experiences we offer</p>
+            <h1>What We Offer</h1>
+            <p>Comprehensive services for the Muslim community</p>
         </section>
 
-        <!-- ACTIVITIES LIST -->
-        <section class="activities fade-in bg-white">
-            <h2>Year-Round Experiences</h2>
+        <!-- SERVICES GRID -->
+        <section class="services fade-in">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <!-- EDUCATION -->
+                <div class="service-card">
+                    <span class="icon">🎓</span>
+                    <h3>Education</h3>
+                    <p>
+                        We are committed to promoting Islamic education and knowledge development within our community.
+                        Our educational programs include Islamic studies, Quranic teachings, lectures on contemporary 
+                        Islamic topics, youth development programs, and knowledge circles.
+                    </p>
+                    <div class="service-highlight">Led by Education Officer</div>
+                </div>
+
+                <!-- WORSHIP FACILITIES -->
+                <div class="service-card">
+                    <span class="icon">🕌</span>
+                    <h3>Worship Facilities</h3>
+                    <p>
+                        We provide dedicated spaces for prayer and worship, ensuring a peaceful and respectful
+                        environment for all our members. Prayer facilities for all five daily prayers, separate prayer
+                        areas for men and women, ablution facilities, and special arrangements for Friday prayers.
+                    </p>
+                    <div class="service-highlight">Led by Spiritual Advisor</div>
+                </div>
+
+                <!-- CHARITY & COMMUNITY SUPPORT -->
+                <div class="service-card">
+                    <span class="icon">❤️</span>
+                    <h3>Charity & Community Support</h3>
+                    <p>
+                        Zakat and charitable giving are pillars of Islam. We facilitate zakat collection and distribution,
+                        community relief programs, support for needy families, educational scholarships, healthcare 
+                        initiatives, and disaster relief efforts.
+                    </p>
+                    <div class="service-highlight">Led by Community Officer</div>
+                </div>
+
+                <!-- RECREATION & EVENTS -->
+                <div class="service-card">
+                    <span class="icon">⛱️</span>
+                    <h3>Recreation & Events</h3>
+                    <p>
+                        We provide family-friendly recreational facilities and host community events in a halal
+                        environment. Enjoy private beach access, family picnic areas, sports activities, wedding venues,
+                        multi-purpose hall for events, and community celebrations.
+                    </p>
+                    <div class="service-highlight">Led by Sports & Recreation Officer</div>
+                </div>
+
+                <!-- MULTI-PURPOSE SERVICES -->
+                <div class="service-card">
+                    <span class="icon">🏛️</span>
+                    <h3>Multi-Purpose Services</h3>
+                    <p>
+                        We are planning to build a state-of-the-art multi-purpose hall for halal weddings and ceremonies,
+                        banquets and catering, conference and seminar facilities, cultural events, and educational
+                        workshops. Serving the Muslim community across Tanzania.
+                    </p>
+                    <div class="service-highlight">Expanding Services</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMITMENT SECTION -->
+        <section class="values fade-in">
+            <h2>Our Commitment</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>🏖️ Private Beach Access</h3>
-                    <p>Enjoy a clean, peaceful, and modest beach environment exclusively for our members.
-                        Perfect for swimming, relaxation, and water activities.</p>
+                    <h3>🤝 Community Unity</h3>
+                    <p>Promoting unity, tolerance, and progress among Muslims</p>
                 </div>
                 <div class="card">
-                    <h3>👨‍👩‍👧‍👦 Family Recreation</h3>
-                    <p>Dedicated picnic zones, children's play areas, and family gathering spaces with BBQ facilities
-                        and comfortable seating areas.</p>
+                    <h3>🌍 Peaceful Coexistence</h3>
+                    <p>Fostering mutual respect between Muslims and non-Muslims</p>
                 </div>
                 <div class="card">
-                    <h3>🕌 Islamic Events</h3>
-                    <p>Host Nikkah ceremonies, Islamic lectures, Quran recitation circles, and community programs
-                        throughout the year.</p>
+                    <h3>✅ Excellence</h3>
+                    <p>Delivering high-quality services with integrity and professionalism</p>
                 </div>
                 <div class="card">
-                    <h3>🍽️ Halal Dining</h3>
-                    <p>Premium halal restaurant and café offering traditional and modern cuisine with stunning ocean
-                        views.</p>
-                </div>
-                <div class="card">
-                    <h3>⚽ Sports & Recreation</h3>
-                    <p>Volleyball, football, badminton courts and fitness facilities for active members.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Educational Workshops</h3>
-                    <p>Regular workshops on Islamic topics, health, wellness, and personal development.</p>
+                    <h3>📈 Growth</h3>
+                    <p>Building sustainable programs that serve present and future generations</p>
                 </div>
             </div>
         </section>
 
-        <!-- MEMBERSHIP BENEFITS -->
-        <section class="membership fade-in bg-light">
-            <h2>Membership Benefits</h2>
-            <div class="benefit-list">
-                <div class="benefit">✓ Unlimited beach access</div>
-                <div class="benefit">✓ Priority booking for events</div>
-                <div class="benefit">✓ Discounts on dining and services</div>
-                <div class="benefit">✓ Exclusive member events</div>
-                <div class="benefit">✓ Family guest privileges</div>
-                <div class="benefit">✓ Seasonal special promotions</div>
-            </div>
-            <a href="contact.html" class="btn">Join Us Today</a>
+        <!-- CTA -->
+        <section class="cta fade-in">
+            <h2>Ready to Be Part of Our Community?</h2>
+            <a href="membership.html" class="btn">Explore Membership</a>
         </section>
     </main>
 
@@ -138,6 +190,7 @@
                 <h5>Quick Links</h5>
                 <ul>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="activities.html">Activities</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="faq.html">FAQ</a></li>
@@ -165,12 +218,6 @@
         <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
-    <!-- Sticky CTA (mobile) -->
-    <div class="sticky-cta" aria-hidden="false">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-
-    <!-- Hamburger Menu and Animations Script -->
     <script>
         // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
@@ -244,9 +291,6 @@
             appearOnScroll.observe(fader);
         });
     </script>
-
-    <!-- Swipe Navigation -->
-    <script src="js/swipe-nav.js"></script>
 
 </body>
 

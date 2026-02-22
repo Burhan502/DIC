@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery of Daressalaam Islamic Club - beach, facilities, and events.">
+    <title>Gallery - Daressalaam Islamic Club</title>
+    <link rel="canonical" href="https://daressalaamislamicclub.com/gallery.html">
+    <meta property="og:title" content="Gallery - Daressalaam Islamic Club">
+    <meta property="og:description" content="Photo gallery of our halal beach club facilities and events.">
+    <meta property="og:url" content="https://daressalaamislamicclub.com/gallery.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Daressalaam Islamic Club - Gallery",
+      "description": "Photo gallery of our halal beach club facilities and events",
+      "url": "https://daressalaamislamicclub.com/gallery.html"
+    }
+    </script>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <!-- 1. Left: Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo 1.png" alt="Daressalaam Islamic Club" class="site-logo">
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        <script>
+            // Hamburger Menu Toggle (with backdrop)
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            function createBackdrop() {
+                let bd = document.querySelector('.menu-backdrop');
+                if (!bd) {
+                    bd = document.createElement('div');
+                    bd.className = 'menu-backdrop';
+                    document.body.appendChild(bd);
+                }
+                return bd;
+            }
+
+            function openMenu() {
+                hamburger.classList.add('active');
+                navMenu.classList.add('active');
+                const bd = createBackdrop();
+                setTimeout(() => bd.classList.add('show'), 10);
+                bd.addEventListener('click', closeMenu);
+                document.body.classList.add('menu-open');
+            }
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                const bd = document.querySelector('.menu-backdrop');
+                if (bd) {
+                    bd.classList.remove('show');
+                    setTimeout(() => bd.remove(), 300);
+                }
+                document.body.classList.remove('menu-open');
+            }
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) closeMenu();
+                    else openMenu();
+                });
+
+                // Close menu when a link is clicked
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        closeMenu();
+                    });
+                });
+
+                // Close on Escape
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeMenu();
+                });
+            }
+
+            // Simple fade-in on scroll
+            const faders = document.querySelectorAll('.fade-in');
+                <a href="membership.html" class="btn btn-sm">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>Photo Gallery</h1>
+            <p>See the beauty of Daressalaam Islamic Club</p>
+        </section>
+
+        <!-- GALLERY GRID -->
+        <section class="gallery fade-in bg-white">
+            <h2>Our Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images\sunset view.jpg" alt="Beautiful private beach at sunset" loading="lazy"
+                        class="responsive-img">
+                    <p>Private Beach - Sunset View</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\sports and recreation.jpg" alt="Family activities on the beach" loading="lazy"
+                        class="responsive-img">
+                    <p>Family Recreation Area</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\halal.jpg" alt="Dining facility with ocean view" loading="lazy"
+                        class="responsive-img">
+                    <p>Halal Restaurant</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\community event.jpg" alt="Islamic event celebration" loading="lazy"
+                        class="responsive-img">
+                    <p>Community Events</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\sports and recreation.jpg" alt="Sports facilities" loading="lazy"
+                        class="responsive-img">
+                    <p>Sports & Recreation</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\wellness.jpg" alt="Wellness and fitness area" loading="lazy"
+                        class="responsive-img">
+                    <p>Wellness Area</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta fade-in bg-light">
+            <h2>Ready to Experience the Magic?</h2>
+            <a href="contact.html" class="btn">Get In Touch</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+255767432432">📞 +255 767 432 432</a></li>
+                    <li><a href="mailto:dic@islamiclub.org">📧 dic@islamiclub.org</a></li>
+                    <li><a href="https://wa.me/255767432432" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+                    <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-faint">
+        <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

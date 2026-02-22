@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Daressalaam Islamic Club Activities - Private beach, family recreation, Islamic events, sports, and dining.">
+    <meta name="description" content="Explore activities and experiences at Daressalaam Islamic Club.">
     <title>Activities - Daressalaam Islamic Club</title>
     <link rel="canonical" href="https://daressalaamislamicclub.com/activities.html">
     <meta property="og:title" content="Activities - Daressalaam Islamic Club">
-    <meta property="og:description"
-        content="Explore our year-round activities including beach access, family recreation, Islamic events, and sports.">
+    <meta property="og:description" content="Explore activities and experiences at Daressalaam Islamic Club.">
     <meta property="og:url" content="https://daressalaamislamicclub.com/activities.html">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -18,14 +16,9 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Daressalaam Islamic Club",
-      "description": "Premium halal beach club with family recreation and Islamic events",
-      "url": "https://daressalaamislamicclub.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dar es Salaam",
-        "addressCountry": "TZ"
-      }
+      "@name": "Daressalaam Islamic Club - Activities",
+      "description": "Premium activities and experiences at our halal beach club",
+      "url": "https://daressalaamislamicclub.com/activities.html"
     }
     </script>
 </head>
@@ -165,12 +158,6 @@
         <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
-    <!-- Sticky CTA (mobile) -->
-    <div class="sticky-cta" aria-hidden="false">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-
-    <!-- Hamburger Menu and Animations Script -->
     <script>
         // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
@@ -244,9 +231,6 @@
             appearOnScroll.observe(fader);
         });
     </script>
-
-    <!-- Swipe Navigation -->
-    <script src="js/swipe-nav.js"></script>
 
 </body>
 

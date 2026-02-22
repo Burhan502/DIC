@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -250,12 +250,7 @@
         <p>&copy; 2026 Daressalaam Islamic Club | Faith • Friendship • Fun</p>
     </footer>
 
-    <!-- Sticky CTA (mobile) -->
-    <div class="sticky-cta" aria-hidden="false">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-
-    <!-- Hamburger Menu and Animations Script -->
+    <!-- Script for Hamburger Menu and Animations -->
     <script>
         // Hamburger Menu Toggle (with backdrop)
         const hamburger = document.getElementById('hamburger');
@@ -361,78 +356,80 @@
         }
     </script>
 
-    <!-- Hero carousel + typing (vanilla JS) -->
-    <script>
-        (function () {
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const hero = document.querySelector('.hero');
-            if (!hero) return;
-
-            const images = [
-                'images/beach.jpg',
-                'images/beach-placeholder.svg',
-                'images/restaurant-placeholder.svg'
-            ];
-
-            // Create slides
-            const slides = images.map((src, i) => {
-                const el = document.createElement('div');
-                el.className = 'hero-slide' + (i === 0 ? ' active' : '');
-                el.style.backgroundImage = `url(${src})`;
-                hero.insertBefore(el, hero.firstChild);
-                return el;
-            });
-
-            if (!prefersReduced && slides.length > 1) {
-                let current = 0;
-                const interval = 6000;
-                setInterval(() => {
-                    slides[current].classList.remove('active');
-                    current = (current + 1) % slides.length;
-                    slides[current].classList.add('active');
-                }, interval);
-            }
-
-            // Typing effect
-            const typedEl = document.querySelector('.overlay .typed');
-            const words = ['Peace', 'Family', 'Nature', 'Halal Luxury'];
-            if (typedEl && !prefersReduced) {
-                typedEl.setAttribute('aria-hidden', 'false');
-                let w = 0, i = 0, deleting = false;
-                const typeSpeed = 90, eraseSpeed = 40, pause = 1600;
-                (function tick() {
-                    const word = words[w];
-                    if (!deleting) {
-                        typedEl.textContent = word.slice(0, i + 1);
-                        i++;
-                        if (i === word.length) {
-                            deleting = true;
-                            setTimeout(tick, pause);
-                        } else {
-                            setTimeout(tick, typeSpeed);
-                        }
-                    } else {
-                        typedEl.textContent = word.slice(0, i - 1);
-                        i--;
-                        if (i === 0) {
-                            deleting = false;
-                            w = (w + 1) % words.length;
-                            setTimeout(tick, 400);
-                        } else {
-                            setTimeout(tick, eraseSpeed);
-                        }
-                    }
-                })();
-            } else if (typedEl) {
-                // If reduced motion, show first word statically
-                typedEl.textContent = words[0];
-            }
-        })();
-    </script>
-
-    <!-- Swipe Navigation -->
-    <script src="js/swipe-nav.js"></script>
+    <!-- Sticky CTA (mobile) -->
+    <div class="sticky-cta" aria-hidden="false">
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
 
 </body>
 
 </html>
+
+<script>
+    // Hero carousel + typing (vanilla JS)
+    (function () {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const hero = document.querySelector('.hero');
+        if (!hero) return;
+
+        const images = [
+            'images/beach.jpg',
+            'images/beach-placeholder.svg',
+            'images/restaurant-placeholder.svg'
+        ];
+
+        // Create slides
+        const slides = images.map((src, i) => {
+            const el = document.createElement('div');
+            el.className = 'hero-slide' + (i === 0 ? ' active' : '');
+            el.style.backgroundImage = `url(${src})`;
+            hero.insertBefore(el, hero.firstChild);
+            return el;
+        });
+
+        if (!prefersReduced && slides.length > 1) {
+            let current = 0;
+            const interval = 6000;
+            setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, interval);
+        }
+
+        // Typing effect
+        const typedEl = document.querySelector('.overlay .typed');
+        const words = ['Peace', 'Family', 'Nature', 'Halal Luxury'];
+        if (typedEl && !prefersReduced) {
+            typedEl.setAttribute('aria-hidden', 'false');
+            let w = 0, i = 0, deleting = false;
+            const typeSpeed = 90, eraseSpeed = 40, pause = 1600;
+            (function tick() {
+                const word = words[w];
+                if (!deleting) {
+                    typedEl.textContent = word.slice(0, i + 1);
+                    i++;
+                    if (i === word.length) {
+                        deleting = true;
+                        setTimeout(tick, pause);
+                    } else {
+                        setTimeout(tick, typeSpeed);
+                    }
+                } else {
+                    typedEl.textContent = word.slice(0, i - 1);
+                    i--;
+                    if (i === 0) {
+                        deleting = false;
+                        w = (w + 1) % words.length;
+                        setTimeout(tick, 400);
+                    } else {
+                        setTimeout(tick, eraseSpeed);
+                    }
+                }
+            })();
+        } else if (typedEl) {
+            // If reduced motion, show first word statically
+            typedEl.textContent = words[0];
+        }
+    })();
+</script>
